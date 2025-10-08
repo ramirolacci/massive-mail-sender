@@ -1,6 +1,6 @@
 <div align="center">
   <h3>📨 Massive Mail Sender 📨</h3>
-  <p>Aplicación de escritorio en Python para envío masivo de emails con editor enriquecido, plantillas y manejo de imágenes inline (CID).</p>
+  <p>Esta es una aplicación de escritorio desarrollada en Python diseñada específicamente para facilitar el envío masivo de correos electrónicos. Cuenta con un editor enriquecido que permite la edición visual del contenido de los emails, facilitando la incorporación de texto formateado, enlaces y otros elementos multimedia.</p>
 </div>
 <img src="/public/Demo.png" alt="Demo"/>
 
