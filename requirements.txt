@@ -1,0 +1,6 @@
+pandas
+openpyxl
+gspread
+oauth2client
+validators
+PyPDF2
