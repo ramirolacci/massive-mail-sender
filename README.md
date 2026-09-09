@@ -1,10 +1,12 @@
 <div align="center">
 
+  <img src="./public/Logo%20Mi%20Gusto%202025.png" alt="Logo Mi Gusto" width="180" />
+
   <h1>📨 Massive Mail Sender</h1>
   <p><strong>Solución integral de escritorio para la gestión y ejecución de campañas de email marketing masivo</strong></p>
 
   <p>
-    <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+    <img src="https://img.shields.io/badge/python-%233670A0.svg?style=for-the-badge&logo=python&logoColor=ffdd54"/>
     <img src="https://img.shields.io/badge/GUI-Tkinter-FF6F00?style=for-the-badge&logo=python&logoColor=white" alt="Tkinter"/>
     <img src="https://img.shields.io/badge/Protocol-SMTP%20%2F%20TLS-00C853?style=for-the-badge&logo=fastapi&logoColor=white" alt="SMTP"/>
     <img src="https://img.shields.io/badge/Estado-Producción-00E676?style=for-the-badge" alt="Status"/>
@@ -12,7 +14,7 @@
 
   <br />
 
-  <img src="public/Demo.png" alt="Massive Mail Sender Interface" width="90%" style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" />
+  <img src="./public/Demo.png" alt="Massive Mail Sender Interface" width="100%" />
 
 </div>
 
