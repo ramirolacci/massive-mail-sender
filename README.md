@@ -1,33 +1,80 @@
 <div align="center">
-  <h3>📨 Massive Mail Sender 📨</h3>
-  <p>Aplicación de escritorio desarrollada en Python diseñada específicamente para facilitar a equipos de marketing el envío masivo de correos electrónicos. Cuenta con un editor enriquecido que permite la edición visual del contenido de los emails, facilitando la incorporación de texto formateado, enlaces y otros elementos multimedia.</p>
+
+  <h1>📨 Massive Mail Sender</h1>
+  <p><strong>Solución integral de escritorio para la gestión y ejecución de campañas de email marketing masivo</strong></p>
+
+  <p>
+    <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+    <img src="https://img.shields.io/badge/GUI-Tkinter-FF6F00?style=for-the-badge&logo=python&logoColor=white" alt="Tkinter"/>
+    <img src="https://img.shields.io/badge/Protocol-SMTP%20%2F%20TLS-00C853?style=for-the-badge&logo=fastapi&logoColor=white" alt="SMTP"/>
+    <img src="https://img.shields.io/badge/Estado-Producción-00E676?style=for-the-badge" alt="Status"/>
+  </p>
+
+  <br />
+
+  <img src="public/Demo.png" alt="Massive Mail Sender Interface" width="90%" style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" />
+
 </div>
-<img src="/public/Demo.png" alt="Demo"/>
 
-## Principales funcionalidades
-- Carga de destinatarios desde: Excel (.xlsx), CSV, PDF (extrae emails por texto) o Google Sheets.
-- Editor enriquecido para Asunto y Mensaje: negrita, cursiva, subrayado, color, tamaño, centrar, listas y enlaces.
-- Plantillas visuales: Vanilla (sin envoltura), Promocional, Corporativa, Minimalista, Navidad y Halloween.
-- Imágenes inline: inserción por placeholders `{{image1}}`, `{{image2}}`, etc. y selector de archivos.
-- Panel SMTP: email, contraseña, servidor, puerto (587/465), TLS y SSL (autoajuste según puerto).
+<br />
 
+---
 
+## 🎯 Descripción General
 
-## Uso de la aplicación
-1. Carga de destinatarios
-   - Excel/CSV/PDF: el archivo debe tener la primera columna llamada `email`. En PDF se extraen correos por texto.
-   - Google Sheets: coloca `credentials.json` en la carpeta del proyecto y selecciona la hoja por ID.
-2. Escribe Asunto y Mensaje
-   - Usa la barra de herramientas para aplicar estilos. El Asunto admite varias líneas; para el envío se colapsan a espacios.
-3. Imágenes
-   - Inserta un placeholder en el texto (`Insertar imagen` → `{{imageN}}`) y luego agrega archivos con “Agregar imágenes…”. En el envío se enlazan como CID.
-4. Selecciona plantilla
-   - `Vanilla` no agrega HTML extra; el resto aplica headers y estilos predefinidos.
-5. SMTP
-   - Completa email/contraseña/servidor. El puerto admite `587` (TLS) o `465` (SSL). Al cambiar el puerto se ajusta automáticamente TLS/SSL.
-6. Enviar
-   - Confirma el envío. Se muestra progreso y resumen (exitosos/fallidos).
+**Massive Mail Sender** es una potente aplicación de escritorio desarrollada para optimizar y simplificar los envíos de correos electrónicos a gran escala. Diseñada pensando en la productividad de los equipos de marketing y comunicación, combina la flexibilidad de un **editor WYSIWYG enriquecido** con la robustez de un motor SMTP multi-protocolo.
 
+Permite personalizar mensajes, incrustar recursos multimedia dinámicos, aplicar temas visuales de alto impacto y procesar listas masivas de contactos desde diversas fuentes de datos sin complicaciones técnicas.
 
-## Licencia
-Aplicacion de uso interno. Ajusta a las necesidades de tu organización.
+---
+
+## ✨ Características Destacadas
+
+### 🎨 Editor Enriquecido & Personalización Visual
+- **Formateo Avanzado:** Edición WYSIWYG con control completo sobre fuentes, tamaños, paleta de colores, alineación, negrita, cursiva, subrayado y enlaces superpuestos.
+- **Asuntos Dinámicos Multilínea:** Formateo y organización fluida de asuntos para maximizar la tasa de apertura (*Open Rate*).
+- **Imágenes Inline (CID Embedding):** Inserción transparente de imágenes en el cuerpo del correo mediante marcadores dinámicos (`{{image1}}`, `{{image2}}`), garantizando que se muestren correctamente en cualquier cliente de correo sin bloquearse como adjuntos externos.
+
+### 📑 Galería de Plantillas Prediseñadas
+Estilos HTML optimizados y *responsive* listos para aplicar con un solo clic:
+- 🍦 **Vanilla:** Formato limpio y nativo sin envoltorios HTML adicionales.
+- 📣 **Promocional:** Diseñado para destacar ofertas, lanzamientos y llamadas a la acción (*CTA*).
+- 💼 **Corporativa:** Estilo profesional, estructurado y sobrio para comunicaciones oficiales.
+- 🌿 **Minimalista:** Diseño enfocado en la lectura clara y directa del mensaje.
+- 🎃 **Halloween & 🎄 Navidad:** Maquetaciones temáticas estacionales para campañas especiales.
+
+### 📥 Importación Inteligente de Contactos
+Procesamiento automatizado de bases de datos de destinatarios desde múltiples formatos:
+- 📊 **Excel (.xlsx) y CSV:** Lectura directa y rápida de hojas de cálculo.
+- 📄 **Extracción desde PDF:** Parsing automatizado de texto para detectar y extraer direcciones de correo válidas.
+- 🌐 **Google Sheets Integration:** Conexión directa mediante API para trabajar con hojas en la nube en tiempo real.
+- 🛡️ **Validación de Sintaxis:** Filtro en tiempo real para descartar correos con formato inválido antes de iniciar el envío.
+
+### ⚙️ Motor SMTP & Monitoreo en Tiempo Real
+- **Soporte Multi-Puerto:** Configuración ágil de puertos estándar `587` (STARTTLS) y `465` (SSL) con ajuste automático de seguridad.
+- **Panel de Progreso:** Seguimiento visual del envío correo por correo con indicador de tasa de éxito.
+- **Reporte Final de Auditoría:** Resumen al finalizar la campaña especificando envíos exitosos, fallidos y causas de error.
+
+---
+
+## 🚀 Flujo de Trabajo
+
+```mermaid
+flowchart LR
+    A[📂 Cargar Contactos] --> B[✏️ Diseñar Mensaje]
+    B --> C[🎨 Aplicar Plantilla]
+    C --> D[⚙️ Configurar SMTP]
+    D --> E[📨 Envío & Monitoreo]
+```
+
+1. **Importación:** Selecciona tu lista de destinatarios (Excel, CSV, PDF o Google Sheets).
+2. **Composición:** Redacta el asunto y el mensaje usando las herramientas de estilo e inserta marcadores de imagen (`{{image1}}`, etc.).
+3. **Estilo:** Elige la plantilla HTML que mejor se adapte al objetivo de tu campaña.
+4. **Conexión:** Verifica las credenciales SMTP de tu servidor.
+5. **Ejecución:** Inicia el proceso masivo y analiza el reporte final de entrega.
+
+---
+
+<div align="center">
+  <sub>Desarrollado para optimizar comunicaciones masivas con máxima eficiencia.</sub>
+</div>
